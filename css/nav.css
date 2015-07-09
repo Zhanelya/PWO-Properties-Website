@@ -1,0 +1,181 @@
+/*
+	Todd Motto Labs
+	URL: www.toddmotto.com
+*/
+
+.nav-menu a,
+.nav-menu a:hover {
+	text-decoration:none;
+}
+.nav-menu ul,
+.nav-menu ol {
+	list-style:none;
+}
+.wrapper {
+	max-width:1280px;
+	width:95%;
+	margin:0 auto;
+	position:relative;
+}
+.main {
+	width:100%;
+	margin:50px 0;
+	text-align:center;
+}
+.content {
+	text-align:left;
+	margin:25px 0;
+}
+.content-text {
+	margin:0 0 15px;
+}
+
+/*------------------------------------*\
+    Flaunt JS Navigation
+\*------------------------------------*/
+
+.nav-menu {
+	position:relative;
+	display:inline-block;
+	font-size:16px;
+	font-weight:400;
+        background:#fff;
+}
+.nav-list {
+    	text-align:center;
+        left:auto;
+        right:auto;
+        padding:22px;
+}
+.nav-item {
+	float:left;
+	*display:inline;
+	zoom:1;
+	position:relative;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+             transition: all .5s ease;
+}
+.nav-item:hover{
+        height: auto;
+        padding-top: 4px;
+}
+.nav-item a {
+	display:block;
+	color:#FFF;
+	padding:15px 20px;
+	background: #005580;
+	border-bottom:1px solid #8B2870;
+        border-left:1px dotted  #8B2870;
+        border-right:1px dotted #8B2770;
+}
+.nav-item > a:hover {
+	background: #0077b3;
+}
+.nav-item:hover .nav-submenu {
+	display:block;
+}
+/* Navigation submenu */
+.nav-submenu {
+	display:none;
+	position:absolute;
+	left:0;
+	width:180px;
+}
+.nav-submenu-item a {
+	background:#8B2770;
+	border-bottom:1px solid #9A337E;
+	display:block;
+	padding:15px;
+}
+.nav-submenu-item a:hover {
+	background:#932C77;
+}
+/* Mobile navigation */
+.nav-mobile {
+	display:none; /* Hide from browsers that don't support media queries */
+	cursor:pointer;
+	position:absolute;
+	top:80%;
+	right:40px;
+	background: url(../images/nav-mobile.png) no-repeat center center;
+	background-size:100%;
+	height:42px;
+	width:55px;
+}
+.nav-mobile:hover {
+        background:#3D3D3B url(../images/nav-mobile-hover.png) no-repeat center center;
+        background-size:100%
+}
+/* Mobile navigation, clickable area for revealing <ul> */
+.nav-click {
+	position:absolute;
+	top:0;
+	right:0;
+	display:none;
+	border-left:1px solid #8B2870;
+	height:49px;
+	width:50px;
+	cursor:pointer;
+}
+.nav-click i {
+	display:block;
+	height:48px;
+	width:48px;
+	background:url(../img/drop.svg) no-repeat center center;
+	background-size:20px;
+}
+.nav-click:hover {
+	background-color:#6E1656;
+}
+.nav-rotate {
+	-webkit-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	transform:rotate(180deg);
+}
+
+/*------------------------------------*\
+    Media Queries
+\*------------------------------------*/
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+	.nav-mobile {
+		display:block;
+	}
+	.nav-menu {
+		width:100%;
+		padding:50px 0 0;
+	}
+	.nav-list {
+		display:none;
+	}
+	.nav-item {
+		width:100%;
+		float:none;
+                margin:0;
+                transition:none;
+	}
+        .nav-item:hover{
+            padding:0px 15px 0px 15px;
+        }
+	.nav-item > a {
+            text-align:center;
+        }
+	.nav-click {
+		display:block;
+	}
+	.nav-mobile-open {
+		border-radius:5px 5px 0 0;
+		-webkit-border-radius:5px 5px 0 0;
+		-moz-border-radius:5px 5px 0 0;
+	}
+	.nav-item:hover .nav-submenu {
+		display:none;
+	}
+	.nav-submenu {
+		position:static;
+		width:100%;
+	}
+}
